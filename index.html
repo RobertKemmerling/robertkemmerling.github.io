@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Kemmerling</title>
     <link rel="stylesheet" href="css/styles.css"></head>
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <!-- Nav Bar -->
-    <div class="MainNavBar">
-        <a class="homeButton" href="#Home">Home</a>
-        <a class="otherButton" href="#about">About Me</a>
-        <a class="otherButton" href="#Projects">Projects</a>
-        <a class="otherButton" href="#Contact">Contact</a>
+    <div id= "MainNavBar" class="MainNavBar Dark">
+        <a class="homeButton" href="index.html">Home</a>
+        <a class="otherButton">
+          <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked onclick="Darkmode()">
+            <label class="onoffswitch-label" for="myonoffswitch"></label>
+          </div>
+        </a>
+        <a class="otherButton" href="AboutMe.html">About Me</a>
+        <a class="otherButton" href="projects.html">Projects</a>
+        <a class="otherButton" href="contact.html">Contact</a>
     </div>
 
     <!-- Header (Picture) -->
@@ -29,30 +36,35 @@
           </div>
         </div>
       </header>
-      <div class=maincontainer>
-        <article class=myArticle>
-          <div class=myArticle-title>
+
+
+      <!-- Page content -->
+      <div id="maincontainer" class="maincontainer Dark">
+        <article class="myArticle">
+          <div class="myArticle-title">
               <h1>Test Article Title</h1>
               <span class="subTitle">test article subtitle</span>
           </div>
-          <div class=mytext>
+          <div class="mytext">
               <p>This is example content This is example content This is example content This is example content This is example content This is example content This is example content This is example content </p>
           </div>
         </article>
 
-        <article class=myArticle>
-          <div class=myArticle-title>
+        <article class="myArticle">
+          <div class="myArticle-title">
               <h1>Test Article Title</h1>
               <span class="subTitle">test article subtitle</span>
           </div>
-          <div class=mytext>
+          <div class="mytext">
               <p>This is example content This is example content This is example content This is example content This is example content This is example content This is example content This is example content </p>
           </div>
         </article>
       </div>
-    <footer class=myfooter>
+
+    <!-- footer -->
+    <footer id="myfooter" class="myfooter Dark">
       <div>
-        <a class=left >Test</a>
+        <a class="left" >Test</a>
       </div>
     </footer>
 </body>
