@@ -8,26 +8,36 @@ h1 {
   font-weight: bold;
 }
 
-.MainNavBar {
+.MainNavBar{
   overflow:hidden;
-  background-color: #222;
   width: 100%;
   height: 110%;
 }
+.MainNavBar.Light{
+  background-color: #777;
+}
+.MainNavBar.Dark{
+  background-color: #222;
+}
 
 .MainNavBar a{
-  color: #f2f2f2;
   font-family:Arial;
   text-align: center;
   text-decoration: none;
-  padding: 18px 18px;
   font-size: 15px;
+  padding: 18px 18px;
+}
+
+.MainNavBar.Light a{
+  color: black;
+}
+.MainNavBar.Dark a{
+  color: white;
 }
 
 .MainNavBar a.otherButton {
   float: right;
 }
-
 .MainNavBar a.homeButton {
   float: left;
 }
@@ -48,6 +58,11 @@ h1 {
   color: black;
   font-size: 16px;
 }
+
+
+
+
+
 
 
 header.masthead {
@@ -89,11 +104,18 @@ header.masthead .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #333;
   opacity: 100%;
 }
 
+.maincontainer.Dark{
+  background-color: #323232;
+  color: white;
+}
 
+.maincontainer.Light{
+  background-color: #aaa;
+  color: Black;
+}
 
 .myArticle {
   padding:50px;
@@ -115,14 +137,24 @@ header.masthead .overlay {
 
 .mytext{
   font-family:lato,helvetica neue,Helvetica,Arial,sans-serif;
-  font-weight:100
+  font: weight 500
 }
+
+
+
 
 .myfooter{
   overflow:hidden;
-  background-color: #222;
   width: 100%;
   height: auto;
+}
+
+.myfooter.Dark{
+  background-color: #222;
+}
+
+.myfooter.Light{
+  background-color: #777;
 }
 
 .myfooter a{
@@ -130,10 +162,19 @@ header.masthead .overlay {
   padding: 18px 18px;
   text-decoration: none;
   text-align: center;
-  color: #ddd;
+
   font: Arial;
   font-weight: 500;
 }
+
+.myfooter.Dark a{
+  color: #ddd;
+}
+
+.myfooter.Light a{
+  color: Black;
+}
+
 .myfooter .left{
   float: left;
 }
@@ -144,4 +185,47 @@ header.masthead .overlay {
 
 .myfooter .right{
   float: right;
+}
+
+
+
+
+
+.onoffswitch {
+  position: relative;
+  width: 30px;
+}
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  height: 10px; padding: 0; line-height: 10px;
+  border: 0px solid #FFFFFF; border-radius: 30px;
+  background-color: #9E9E9E;
+}
+.onoffswitch-label:before {
+  content: "";
+  display: block; width: 15px; margin: -5px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 25px;
+  border-radius: 30px;
+  box-shadow: 0 6px 12px 0px #757575;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  background-color: #444;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  border-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  right: 0px; 
+  background-color: #2196F3; 
+  box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
 }
