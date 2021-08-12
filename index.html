@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Robert Kemmerling</title>
     <link rel="stylesheet" href="css/styles.css"></head>
     <script src="js/scripts.js"></script>
@@ -10,20 +10,29 @@
 <body>
     <!-- Nav Bar -->
     <div id= "MainNavBar" class="MainNavBar Dark">
-        <a class="homeButton" href="index.html">Home</a>
-        <a class="otherButton">
-          <div class="onoffswitch">
-            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked onclick="Darkmode()">
-            <label class="onoffswitch-label" for="myonoffswitch"></label>
+      <a class="homebutton"href="index">Home</a>
+      <div class="MainNavBaroptions">
+        <div class="dropdown">
+          <a class="dropdownpbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="#">Boat controller</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
           </div>
-        </a>
-        <a class="otherButton" href="AboutMe.html">About Me</a>
-        <a class="otherButton" href="projects.html">Projects</a>
-        <a class="otherButton" href="contact.html">Contact</a>
+        </div>
+        <div class="dropdown">
+          <a class="dropdownpbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="#">Boat controller</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
     </div>
-
+    
     <!-- Header (Picture) -->
-    <header class="masthead" style="background-image: url('assets/img/test.JPG')">
+    <header class="masthead" style="background-image: url('assets/img/title.jpg')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
@@ -40,15 +49,36 @@
 
       <!-- Page content -->
       <div id="maincontainer" class="maincontainer Dark">
+
+
+
+
         <article class="myArticle">
           <div class="myArticle-title">
-              <h1>Test Article Title</h1>
-              <span class="subTitle">test article subtitle</span>
+              <h1>Boat Controller</h1>
+              <span class="subTitle">Control system for small USVs</span>
+          </div>
+          <div class="articlepic">
+            <img src="assets/img/BC.png" >
           </div>
           <div class="mytext">
-              <p>This is example content This is example content This is example content This is example content This is example content This is example content This is example content This is example content </p>
+              <p>This Project provides drive-by-wire and autonavigational abileties in an affordable and easy to implement way while allowing an user to record the performance of an unmanned surface vehule.</p>
+              <ul class="dotlist">
+                <li>GPS</li>
+                <li>INS</li>
+                <li>blackbox sd card system</li>
+                <li>internal power source and BMS</li>
+              </ul>
           </div>
         </article>
+
+
+
+
+
+
+
+
 
         <article class="myArticle">
           <div class="myArticle-title">
@@ -59,6 +89,9 @@
               <p>This is example content This is example content This is example content This is example content This is example content This is example content This is example content This is example content </p>
           </div>
         </article>
+
+
+        
       </div>
 
     <!-- footer -->
