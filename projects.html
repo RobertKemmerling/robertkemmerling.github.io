@@ -2,30 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - Robert Kemmerling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Robert Kemmerling</title>
     <link rel="stylesheet" href="css/styles.css"></head>
     <script src="js/scripts.js"></script>
 </head>
 <body>
-  <!-- Nav Bar -->
-  <div id= "MainNavBar" class="MainNavBar Dark">
-      <a class="homeButton" href="index.html">Home</a>
-      <a class="otherButton">
-        <div class="onoffswitch">
-          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked onclick="Darkmode()">
-          <label class="onoffswitch-label" for="myonoffswitch"></label>
+    <!-- Nav Bar -->
+    <div id= "MainNavBar" class="MainNavBar Dark">
+      <a class="homebutton"href="index.html">Home</a>
+      <div class="MainNavBaroptions">
+        <div class="button">
+          <a class="buttoncontent" href="AboutMe.html">About Me</a>
         </div>
-      </a>
-      <a class="otherButton" href="AboutMe.html">About Me</a>
-      <a class="otherButton" href="projects.html">Projects</a>
-      <a class="otherButton" href="contact.html">Contact</a>
-  </div>
-  
-</body>
+        <div class="dropdown">
+          <a class="dropdownpbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="projects.html">Boat controller</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="dropdownpbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="#">Boat controller</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div id="maincontainer" class="maincontainer Dark">
-  
-</div>
+
+      <!-- Page content -->
+      <div id="maincontainer" class="maincontainer Dark">
+
+
+
+
+        <article class="myArticle" id="boatcontroller">
+          <div class="myArticle-title">
+              <h1>Boat Controller</h1>
+              <span class="subTitle">Control system for small USVs</span>
+          </div>
+          <div class="articlepic">
+            <img src="assets/img/BC.png" >
+          </div>
+          <div class="mytext">
+              <p>This Project provides drive-by-wire and autonavigational abileties in an affordable and easy to implement way while allowing an user to record the performance of an unmanned surface vehule.</p>
+              <ul class="dotlist">
+                <li>GPS</li>
+                <li>INS</li>
+                <li>blackbox sd card system</li>
+                <li>internal power source and BMS</li>
+              </ul>
+          </div>
+          <div class="largetext">
+            <p>In a first step the required specifications where recorded and a ruff </p>
+          </div>
+        </article>
+
+
+
+
+
+
+
+
+
+        <article class="myArticle">
+          <div class="myArticle-title">
+              <h1>DSLR Gymbal and star tracker</h1>
+              <span class="subTitle">Automatic Star tracking </span>
+          </div>
+          <div class="mytext">
+              <p>This is example content This is example content This is example content This is example content This is example content This is example content This is example content This is example content </p>
+          </div>
+        </article>
+
+
+        
+      </div>
+
+    <!-- footer -->
+    <footer id="myfooter" class="myfooter Dark">
+      <div>
+        <a class="left" >Robert Kemmerling</a>
+      </div>
+    </footer>
+</body>
 </html>
