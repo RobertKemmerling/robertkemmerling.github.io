@@ -1,3 +1,9 @@
+body {
+  background-color: #323232;
+  color: white;
+}
+
+
 h1 {
   display: block;
   font-size: 2em;
@@ -24,7 +30,6 @@ body{
 
 .MainNavBar{
   padding: 20px;
-  background-color: #323232;
 }
 
 
@@ -134,17 +139,19 @@ body{
 header.masthead {
   margin-bottom: 0px;
   background-color: #868e96;
-  background-attachment:local;
+  background-attachment:scroll;
   background-position:center;
   background-repeat: no-repeat;
-  position: relative;
+  position:static;
+  width: 100%;
   background-size:auto;
   padding: 200px 0;
   text-align: center;
+  left: 0;
 }
 
 header.masthead .overlay {
-  position:absolute;
+  position:static;
   top: 0;
   left: 0;
   height: 100%;
@@ -176,20 +183,15 @@ header.masthead .overlay {
 
 .maincontainer {
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 1200px;
   opacity: 100%;
+  display: block;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.maincontainer.Dark{
-  background-color: #323232;
-  color: white;
-}
 
-.maincontainer.Light{
-  background-color: #aaa;
-  color: Black;
-}
 
 
 
@@ -205,9 +207,11 @@ header.masthead .overlay {
 
 
 .myArticle {
-  padding:50px;
+  margin:50px;
+  padding: 20px;
   padding-left:15%;
   padding-right:15%;
+  border:1px ;
   
 }
 .myArticle-title {
@@ -216,7 +220,7 @@ header.masthead .overlay {
   margin-bottom: 10px;
   font-family:Arial;
   font-weight:700;
-  min-height: 130px;
+  display: block;
 }
 .subTitle {
   margin: 0 0 10px;
@@ -227,15 +231,19 @@ header.masthead .overlay {
 .mytext{
   font-family:lato,helvetica neue,Helvetica,Arial,sans-serif;
   font: weight 500;
-  width: 60%;
   padding: 5px;
+  display: block;
+  width:50%;
 }
 
 .articlepic img{
-  width: 300px;
+  width: 400px;
   min-height: 35px;
   max-height: auto;
-  float:right;
+  position: static;
+  width:40%;
+  float: right;
+  margin-left: 40px;
   border-image-width:initial;
 }
 
@@ -260,6 +268,9 @@ header.masthead .overlay {
   overflow:hidden;
   width: 100%;
   height: auto;
+  bottom: 0;
+  left: 0;
+  position: fixed;
 }
 
 .myfooter.Dark{
