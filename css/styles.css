@@ -236,6 +236,16 @@ header.masthead .overlay {
   width:50%;
 }
 
+
+.mytext-whide{
+  font-family:lato,helvetica neue,Helvetica,Arial,sans-serif;
+  font: weight 500;
+  padding: 5px;
+  display: block;
+  width:90%;
+}
+
+
 .articlepic img{
   width: 400px;
   min-height: 35px;

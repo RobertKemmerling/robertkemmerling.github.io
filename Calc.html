@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="css/styles.css"></link>
+    <script src="js/scripts.js"></script>
+    <script src="js/Calc.js"></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div id= "MainNavBar" class="MainNavBar Dark">
+        <a class="homebutton"href="index.html">Home</a>
+        <div class="MainNavBaroptions">
+          <div class="button">
+            <a class="buttoncontent" href="AboutMe.html">About Me</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropdownpbtn">Projects</a>
+            <div class="dropdown-content">
+              <a href="projects.html#boatcontroller">Boat controller</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdownpbtn">Projects</a>
+            <div class="dropdown-content">
+              <a href="#">Boat controller</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+            <!-- Page content -->
+            <div id="maincontainer" class="maincontainer Dark">
+                <article class="myArticle">
+                 <div class="myArticle-title">
+                     <h1>Resistance configurator</h1>
+                 </div>
+                 <div class="mytext-whide">
+                     <p>The Resistance configurator findes a combination of parralell and series resistors which is as close as possible as the input resistance value</p>
+                     Input Resistance: <input id="inputResistance" type="number" placeholder="Target Resistance" oninput="FindRes(this.value)" onchange="FindRes(this.value)">
+                     <p>Possible combinations: <span id="outputGrams"></span></p>
+                     <input type="button" onclick="FindRes()" value="test"></input>
+                     <div id="resulttable">
+
+
+                     </div>
+                 </div>
+               </article>
+       
+       
+       
+               
+             </div>
+    
+</body>
+</html>
