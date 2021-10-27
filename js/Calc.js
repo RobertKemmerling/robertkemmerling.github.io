@@ -8,8 +8,7 @@ function FindRes() {
     valNum = document.getElementById('inputResistance').value
     //read and select the right Resistor series
     
-    //Res_select = document.getElementById('rslist').value
-    Res_select = "E12";
+    Res_select = document.getElementById('inputE').value
     switch(Res_select) {
         case "E12":
             Res_values = new Array(0, 1, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2);

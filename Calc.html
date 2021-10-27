@@ -44,13 +44,20 @@
                  </div>
                  <div class="mytext-whide">
                      <p>The Resistance configurator findes a combination of parralell and series resistors which is as close as possible as the input resistance value</p>
-                     Input Resistance: <input id="inputResistance" type="number" placeholder="Target Resistance" oninput="FindRes(this.value)" onchange="FindRes(this.value)">
-                     <p>Possible combinations: <span id="outputGrams"></span></p>
-                     <input type="button" onclick="FindRes()" value="test"></input>
-                     <div id="resulttable">
+                     <div style="padding: 20px;">
+                      Please select the E series of the available Resistors: 
+                      <select id="inputE" onchange="FindRes()">
+                        <option value="E12">E12</option>
+                        <option value="E24">E24</option>
+                        <option value="E96">E96</option>
+                      </select>
+                    </div>
+                     <div style="padding: 20px;">Input Resistance: <input style="margin: 5px; padding: 5px;" id="inputResistance" type="number" placeholder="Target Resistance" oninput="FindRes()" onchange="FindRes()">&Omega;</div>
+                    <div style="padding-top: 40px;">Possible Combinations: </div>
+                    <div class="mytable" id="resulttable">
 
 
-                     </div>
+                    </div>
                  </div>
                </article>
        
