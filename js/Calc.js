@@ -27,9 +27,9 @@ function FindRes() {
     //next time I should make some limits (if the resistance of each resistor is over the target resistance there is no point to calculate the series resistance)
     var all_Res_values = [];
     var x = 0;
-    for (var i = 0; i < 6; i++){
-        for (var j = 0; j < Res_values.length; j++){
-            all_Res_values[x] = (Res_values[j] * (Math.pow(10, i)));
+    for (var i = 0; i < 10; i++){
+        for (var j = 1; j < Res_values.length; j++){
+            all_Res_values[x] = Math.round((Res_values[j] * (Math.pow(10, i)))*100)/100;
             x ++;
         }
     }
@@ -82,11 +82,13 @@ function tableCreate(target,input,delet = 0) {
 //looks for the closest value to the target for series resistors (only 2 resistors)
 function res_series(target,R){
     d_series = [[]]; //basicly I just make a list of every possebilety
+    var shift_rep = 0;
     for (var i = 0; i < R.length; i++){ //for every R1
-        for (var j = 1; j < R.length; j++){ //for every R2
+        for (var j = shift_rep; j < R.length; j++){ //for every R2
             err_hold = ((target - (R[i] + R[j]))/target) * 100; //error = DeltaR/R*100 
             d_series.push([R[i], "+", R[j], err_hold.toPrecision(4), Math.abs(err_hold)]); //saves everything (yes its bad just wait a bit I will fix it)
         }
+        shift_rep++;
     }
     d_series.sort(sortFunction); //sort the huge list
     for (var i = 1; i < 5; i++){ //takes the best 5 results and saves it onto the main data array
@@ -98,11 +100,13 @@ function res_series(target,R){
 //looks for the closest value to the target for parrales resistors (only 2 resistors)
 function res_para(target,R){
     d_para = [[]]; //basicly I just make a list of every possebilety
+    var shift_rep = 0;
     for (var i = 0; i < R.length; i++){ //for every R1
         for (var j = 1; j < R.length; j++){ //for every R2
             err_hold = (((1/target) - (1/(R[i]) + 1/(R[j])))/(target)) * 100; //error = DeltaG/G*100 
             d_para.push([R[i], "//", R[j], err_hold.toPrecision(4), Math.abs(err_hold)]); //saves everything (yes its bad just wait a bit I will fix it)
         }
+        shift_rep++;
     }
     d_para.sort(sortFunction); //sort the huge list
     for (var i = 1; i < 5; i++){ //takes the best 5 results and saves it onto the main data array
