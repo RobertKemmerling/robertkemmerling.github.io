@@ -102,7 +102,7 @@ function res_para(target,R){
     d_para = [[]]; //basicly I just make a list of every possebilety
     var shift_rep = 0;
     for (var i = 0; i < R.length; i++){ //for every R1
-        for (var j = 1; j < R.length; j++){ //for every R2
+        for (var j = shift_rep; j < R.length; j++){ //for every R2
             err_hold = (((1/target) - (1/(R[i]) + 1/(R[j])))/(target)) * 100; //error = DeltaG/G*100 
             d_para.push([R[i], "//", R[j], err_hold.toPrecision(4), Math.abs(err_hold)]); //saves everything (yes its bad just wait a bit I will fix it)
         }
@@ -125,3 +125,4 @@ function sortFunction(a, b) {
         return (a[4] < b[4]) ? -1 : 1;
     }
 }
+

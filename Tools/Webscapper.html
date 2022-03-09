@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="../css/styles.css"></link>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/Calc.js"></script>
+    <script src="../js/Webscrap.js"></script>
+</head>
+<body onload="checkaccount()">
+    <!-- Nav Bar -->
+    <div id= "MainNavBar" class="MainNavBar Dark">
+        <a class="homebutton"href="index.html">Home</a>
+        <div class="MainNavBaroptions">
+          <div class="button">
+            <a class="buttoncontent" href="AboutMe.html">About Me</a>
+          </div>
+          <div class="dropdown">
+            <a class="dropdownpbtn">Projects</a>
+            <div class="dropdown-content">
+              <a href="projects.html#boatcontroller">Boat controller</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdownpbtn">Projects</a>
+            <div class="dropdown-content">
+              <a href="#">Boat controller</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+            <!-- Page content -->
+            <div id="maincontainer" class="maincontainer Dark" >
+                <article class="myArticle">
+                 <div class="myArticle-title">
+                     <h1>My Webscapper</h1>
+                 </div>
+                 <div class="mytext-whide">
+                     
+                    <div style="padding: 20px;" id="loginpage">
+                        <p>This tool let you survey Amazon prices. Just enter a amazon URL and the Webscapper will save your profile with the price of the article as a cookie. The nex time you come to this site a history of the amazon price will be listed.</p>
+                        <p>Warning!! Everytime you clear your cookies the history of the prices as well as your profile on this site will be deleted. No information about you is saved outside of your browser.</p>
+                        <p>It seams like you do not have a profile. Please enter the following informations:</p>
+                        
+                        <label>User Name:</label><br>
+                        <input style="margin: 5px; padding: 5px;" type="text" id="nameinput" name="LoginName"><br>
+                        <input type="submit" value="Submit" onclick="makeaccount()">
+                        
+                    </div>
+                    <div style="padding: 20px;" id="userpage">
+                        <p>Welcome back</p>
+                        <p id="usernamedisplay"></p>
+                    </div>
+                 </div>
+               </article>
+       
+       
+       
+               
+             </div>
+    
+</body>
+</html>
