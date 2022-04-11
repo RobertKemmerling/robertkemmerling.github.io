@@ -7,23 +7,39 @@
     <title>Contact - Robert Kemmerling</title>
     <link rel="stylesheet" href="css/styles.css"></head>
     <script src="js/scripts.js"></script>
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://kit.fontawesome.com/2760e8a2ed.js" crossorigin="anonymous"></script></head>
+    <style>
+      html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    </style>
 <body>
     <!-- Nav Bar -->
     <div id= "MainNavBar" class="MainNavBar Dark">
-        <a class="homeButton" href="index.html">Home</a>
-        <a class="otherButton">
-          <div class="onoffswitch">
-            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked onclick="Darkmode()">
-            <label class="onoffswitch-label" for="myonoffswitch"></label>
+      <a class="homebutton"href="index.html"><i class="fa-solid fa-house"></i></a>
+      <div class="MainNavBaroptions">
+        <div class="button">
+          <a class="buttoncontent" href="AboutMe.html">
+            About me
+          </a>
+        </div>
+        <div class="dropdown">
+          <a class="dropdownpbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="projects.html#boatcontroller">Boat controller</a>
+            <a href="#">DSLR star tracker (In progress)</a>
+            <a href="#">(In progress)</a>
           </div>
-        </a>
-        <a class="otherButton" href="AboutMe.html">About Me</a>
-        <a class="otherButton" href="projects.html">Projects</a>
-        <a class="otherButton" href="contact.html">Contact</a>
+        </div>
+        <div class="dropdown">
+          <a class="dropdownpbtn">Online Toolbox</a>
+          <div class="dropdown-content">
+            <a href="Tools/Calc.html">Resistor Tool (In progress)</a>
+            <a href="#">Max-Plus Algebra (In progress)</a>
+            <a href="#">Wave Theory (In progress)</a>
+          </div>
+        </div>
+      </div>
     </div>
-    
-</body>
 
 
 <div id="maincontainer" class="maincontainer Dark">

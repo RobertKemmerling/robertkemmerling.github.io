@@ -140,12 +140,11 @@ body{
 header.masthead {
   margin-bottom: 0px;
   background-color: #868e96;
-  background-attachment:scroll;
+  background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
   position:static;
   width: 100%;
-  background-size:auto;
   padding: 200px 0;
   text-align: center;
   left: 0;
@@ -184,7 +183,7 @@ header.masthead .overlay {
 
 .maincontainer {
   top: 0;
-  width: 1200px;
+  width: 70%;
   opacity: 100%;
   display: block;
   align-items: center;
